@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: telegram-downloader-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python downloader_bot.py
+    # Set these as secret environment variables in the Render dashboard:
+    #   BOT_TOKEN, ALLOWED_USER_IDS
